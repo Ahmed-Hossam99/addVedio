@@ -1,0 +1,41 @@
+  <div class="container">
+    <h2 class="center orange-text">Classmates</h2>
+    <ul class="collection ">
+{{#each users}}
+ <li class="collection-item avatar">
+        <i class="material-icons circle"> 
+            <img src="{{imageUrl}}" width="40px" height="40px" >
+       </i>
+        <span class="title">{{name}}</span>
+        <p class="grey-text">{{email}}</p>
+        <a href="/private/{{name}}" class="secondary-content orange-text">
+          <span>send msg <i class="material-icons ">create</i></span>
+        </a>
+      </li>
+{{/each}}
+      {{!-- <li class="collection-item avatar">
+        <i class="material-icons circle"> 
+            <img src="https://res.cloudinary.com/dqfrk92mp/image/upload/v1582922694/fb2i7jczxdsefpw6zsdc.png" width="40px" height="40px" >
+       </i>
+        <span class="title">Ryu</span>
+        <p class="grey-text">black-belt</p>
+        <a href="private.html" class="secondary-content ">
+          <span>send msg <i class="material-icons ">create</i></span>
+        </a>
+      </li>
+      <li class="collection-item avatar">
+        <i class="material-icons circle"> 
+            <img src="https://res.cloudinary.com/dqfrk92mp/image/upload/v1582922694/fb2i7jczxdsefpw6zsdc.png" width="40px" height="40px" >
+       </i>
+        <span class="title">Yoshi</span>
+        <p class="grey-text">orange-belt</p>
+        <a href="" class="secondary-content">   
+          <span>send msg <i class="material-icons ">create</i></span>
+        </a>
+      </li> --}}
+  
+    </ul>
+  </div>
+
+  <!-- Compiled and minified JavaScript -->
+  <script src="https://code.jquery.com/jquery-3.3.1.min.js"></script>

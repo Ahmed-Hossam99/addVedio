@@ -1,0 +1,72 @@
+ <div class="container">
+    {{!-- <h2>OOOH , SORRY 
+        <div id="terms" class="modal">
+            <div class="modal-content">
+              <h4>UPDATE</h4>
+              <p> لسه معرفش ازاي ابعت برايفت ماسيدج .. هتعلمها بإذن الله .. وهعمل تحديث وابعتلك ع ايميلك .. اتفقنا ؟</p>
+            </div>
+            <div class="modal-footer">
+              <a href="#!" class="modal-close btn orange">اتفقنا</a>
+            </div>
+          </div>
+    <!-- <a href="#" class="btn-floating red ">
+        <i class="material-icons">remove</i>
+      </a> -->
+      <a class="btn orange modal-trigger pulse" href="#terms" id="pvt">دوس بسرعة</a>
+    </h2> --}}
+   <input type='hidden' id="personName" type="text" placeholder="Handle" name="handle" value="{{person.name}}" />
+   <input type='hidden' id="personId" type="text" placeholder="Handle" name="handle" value="{{person._id}}" />
+   <input type='hidden' id="toName" type="text" placeholder="Handle" name="handle" value="{{toName}}" />
+   <input type='hidden' id="toId" type="text" placeholder="Handle" name="handle" value="{{toId}}" />
+    <input type='hidden' id="personImageUrl" type="text" placeholder="Handle" name="handle" value="{{person.imageUrl}}" />
+    <div class="container" >
+    <h2 class="center orange-text">{{toName}}</h2>
+    <ul class="collection" id="chat">
+        {{#each msgs}}
+    <li class="collection-item avatar #fffde7 yellow lighten-5">
+        <i class="material-icons circle"> 
+             <img src="{{personImageUrl}}" width="40px" height="40px" >
+        </i>
+        <span class="title"><strong>{{personName}}</strong></span>
+        <p class="black-text">{{message}}</p>
+        <a  class="secondary-content">
+          <span class="orange-text">{{Date}}</span>
+        </a>
+    </li>
+      
+        {{/each}}
+
+      {{!-- <li class="collection-item">Mario</li> --}}
+      
+    </ul>
+   
+    <div class="row orange-text" >
+      <div class="input-field col s12 orange-text">
+          <i class="material-icons prefix orange-text" id="send">send</i>
+        {{!-- <textarea id="textarea1" class="materialize-textarea orange-belt"></textarea>
+        <label for="textarea1" class="orange-text">Message :</label> --}}
+         <input id="textarea1" type="text" class="orange-belt" name="name">
+         <label for="textarea1"  class="orange-text"> Message :</label>
+      </div>
+    </div>
+  </div>
+
+  </div>
+
+  <!-- Compiled and minified JavaScript -->
+  <script src="https://code.jquery.com/jquery-3.3.1.min.js"></script>
+</script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0-beta/js/materialize.min.js"></script>
+  <script src="/private.js"></script>
+  <script>
+    $(document).ready(function(){
+      $('.modal').modal();
+    });
+  </script>
+   
+   
+  <!-- Compiled and minified JavaScript -->
+  {{!-- <script src="https://code.jquery.com/jquery-3.3.1.min.js"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0-beta/js/materialize.min.js"></script>
+  <script src="/chat.js">    
+  </script> --}}
